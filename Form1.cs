@@ -153,7 +153,7 @@ namespace tic_tac_toe
                     pictureBox.Enabled = true;
                     pictureBox.Image = null;
                     pictureBox.BackgroundImage= Properties.Resources.question_mark2;
-
+                    pictureBox.BackColor = Color.Transparent;
                 }
             }
         }
@@ -191,15 +191,31 @@ namespace tic_tac_toe
         private bool CheckRowForWinner(int row)
         {
 
-            return (AreImagesIdentical(pictureBoxes[row,0].Image, pictureBoxes[row, 1].Image) &&
-                    AreImagesIdentical(pictureBoxes[row, 1].Image, pictureBoxes[row, 2].Image));
+            if(AreImagesIdentical(pictureBoxes[row,0].Image, pictureBoxes[row, 1].Image) &&
+                    AreImagesIdentical(pictureBoxes[row, 1].Image, pictureBoxes[row, 2].Image))
+            {
+                pictureBoxes[row, 0].BackColor = Color.FromArgb(200, 197, 217);
+                pictureBoxes[row, 1].BackColor = Color.FromArgb(200, 197, 217);
+                pictureBoxes[row, 2].BackColor = Color.FromArgb(200, 197, 217);
+
+                return true;
+            }
+            return false;
         }
 
         private bool CheckColumnForWinner(int col)
         {
-           
-            return (AreImagesIdentical(pictureBoxes[0, col].Image, pictureBoxes[1, col].Image) &&
-                    AreImagesIdentical(pictureBoxes[1, col].Image, pictureBoxes[2, col].Image));
+            if (AreImagesIdentical(pictureBoxes[0, col].Image, pictureBoxes[1, col].Image) &&
+                      AreImagesIdentical(pictureBoxes[1, col].Image, pictureBoxes[2, col].Image))
+            {
+                pictureBoxes[0, col].BackColor = Color.FromArgb(200, 197, 217);
+                pictureBoxes[1, col].BackColor = Color.FromArgb(200, 197, 217);
+                pictureBoxes[2, col].BackColor = Color.FromArgb(200, 197, 217);
+
+                return true;
+            }
+
+            return false;
         }
 
         private bool CheckDiagonalForWinner()
@@ -208,6 +224,11 @@ namespace tic_tac_toe
             if (AreImagesIdentical(pictureBoxes[0, 0].Image, pictureBoxes[1, 1].Image) &&
                 AreImagesIdentical(pictureBoxes[1, 1].Image, pictureBoxes[2, 2].Image))
             {
+
+                pictureBoxes[0, 0].BackColor = Color.FromArgb(200, 197, 217);
+                pictureBoxes[1, 1].BackColor = Color.FromArgb(200, 197, 217);
+                pictureBoxes[2, 2].BackColor = Color.FromArgb(200, 197, 217);
+
                 return true;
                
             }
@@ -216,6 +237,10 @@ namespace tic_tac_toe
             if (AreImagesIdentical(pictureBoxes[0, 2].Image, pictureBoxes[1, 1].Image) &&
                 AreImagesIdentical(pictureBoxes[1, 1].Image, pictureBoxes[2, 0].Image))
             {
+                pictureBoxes[0, 2].BackColor = Color.FromArgb(200, 197, 217);
+                pictureBoxes[1, 1].BackColor = Color.FromArgb(200, 197, 217);
+                pictureBoxes[2, 0].BackColor = Color.FromArgb(200, 197, 217);
+
                 return true;
                
             }
