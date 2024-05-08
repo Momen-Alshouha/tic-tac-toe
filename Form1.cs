@@ -60,7 +60,7 @@ namespace tic_tac_toe
         {
             Color white = Color.FromArgb(255, 255, 255, 255);
             Pen pen = new Pen(white);
-            pen.Width = 10;
+            pen.Width = 15;
 
             pen.StartCap = System.Drawing.Drawing2D.LineCap.Round;
             pen.EndCap = System.Drawing.Drawing2D.LineCap.Round;
