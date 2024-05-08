@@ -89,10 +89,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\o.png" />
+    <Content Include="screenshots\draw.png" />
+    <Content Include="screenshots\game.png" />
+    <Content Include="screenshots\winner.png" />
     <None Include="Resources\x1.png" />
     <None Include="Resources\o1.png" />
     <None Include="Resources\question_mark.png" />
     <Content Include="Resources\x.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
