@@ -8,6 +8,18 @@ This is a simple implementation of the classic Tic-Tac-Toe game using Windows Fo
 - Win detection: The game automatically detects when a player achieves three marks in a row and declares them as the winner.
 - Draw detection: If all spaces are filled and no player has won, the game declares a draw.
 
+## Screenshots
+
+*Figure 1: Gameplay*
+![Gameplay](screenshots/game.png)
+
+*Figure 2: Winner Announcement*
+![Winner](screenshots/winner.png)
+
+
+*Figure 2: Draw Announcement*
+![Winner](screenshots/draw.png)
+
 ## Getting Started
 
 ### Prerequisites
